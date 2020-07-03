@@ -11,6 +11,11 @@ public class CreateRoom : MonoBehaviourPunCallbacks
     [SerializeField]
     private Text _roomName;
 
+    [SerializeField]
+    private Transform _contentofRoomList;
+
+    [SerializeField]
+    public GameObject _roomListItemPerfab;
 
     public void OnClick_CreateRoom() 
     {
@@ -27,7 +32,14 @@ public class CreateRoom : MonoBehaviourPunCallbacks
 
     public override void OnCreatedRoom()
     {
+       
         Debug.Log("Room Created");
+        GameObject room = Instantiate(_roomListItemPerfab,new Vector3(0,0,0),Quaternion.identity) as GameObject;
+      
+        room.transform.GetChild(0).GetComponent<Text>().text = _roomName.text.ToString();
+
+        room.transform.parent = _contentofRoomList;
+        room.GetComponent<RectTransform>().localScale = new Vector3 (1f, 1f, 1f);
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)

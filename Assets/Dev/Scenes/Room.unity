@@ -325,6 +325,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _roomName: {fileID: 1818216885}
+  _contentofRoomList: {fileID: 672277111}
+  _roomListItemPerfab: {fileID: 4506024402964065084, guid: 6835bff2c56a0b04cb24bfb974e35800,
+    type: 3}
 --- !u!1 &387939791
 GameObject:
   m_ObjectHideFlags: 0
