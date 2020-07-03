@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CreateRoom : MonoBehaviourPunCallbacks
+public class CreateRoomMenu : MonoBehaviourPunCallbacks
 {
 
     [SerializeField]
